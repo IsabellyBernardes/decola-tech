@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.domain.model;
 
 import jakarta.persistence.*;
 
@@ -9,20 +9,14 @@ public class Tarefa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @Column(unique = true)
     private String titulo;
 
-    @OneToOne(cascade = CascadeType.ALL)
     private String descricao;
 
-    @OneToOne(cascade = CascadeType.ALL)
     private String categoria;
 
-    @OneToOne(cascade = CascadeType.ALL)
     private Boolean concluida;
 
-    @OneToOne(cascade = CascadeType.ALL)
     private String prioridade;
 
     public Long getId() {

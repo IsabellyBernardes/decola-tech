@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.domain.model;
 
 import jakarta.persistence.*;
 
@@ -9,13 +9,11 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER) //quando um usuário é deletado, deleterá em cascata
+    //@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER) //quando um usuário é deletado, deleterá em cascata
     private String altaPrioridade;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private String mediaPrioridade;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private String baixaPrioridade;
 
     public Long getId() {
