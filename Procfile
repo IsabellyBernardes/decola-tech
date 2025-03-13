@@ -1,0 +1,1 @@
+web : java -jar build/libs/decola_tech-1.0-SNAPSHOT.jar
